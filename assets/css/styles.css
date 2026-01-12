@@ -95,9 +95,12 @@ h1{margin:14px 0 10px; font-size: clamp(28px, 3.3vw, 44px); line-height:1.12}
     grid-template-columns: 1fr !important;
   }
 }
-/* Ensure all image cards show full equipment without cropping */
-.card img{
-  object-fit: contain !important;
-  background: #0a0f1d;
-  padding: 10px;
+/* 3-image strip: show full images without cropping */
+.strip-img{
+  width:100%;
+  height:220px;
+  object-fit: contain;
+  background:#0a0f1d;
+  padding:10px;
+  display:block;
 }
