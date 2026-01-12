@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Forfaits | Axis Conformité & Services</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="/mission/">
+        <img src="/assets/images/axis-logo.png" alt="Axis" />
+        <span>Axis Conformité & Services</span>
+      </a>
+
+      <nav class="nav">
+        <a href="/mission/">Notre mission</a>
+        <a href="/approche-axis/">Approche Axis</a>
+        <a href="/forfaits/">Forfaits</a>
+        <a href="/services-plus/">Services PLUS</a>
+        <a class="cta" href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge">Des forfaits clairs et transparents</div>
+          <h1>Choisissez le niveau de couverture adapté à votre réalité.</h1>
+
+          <p class="lead">
+            Nos forfaits ont été développés pour offrir le bon niveau de couverture, sans complexité inutile,
+            tout en maintenant une logique claire et transparente.
+          </p>
+
+          <p class="lead">
+            Découvrez ci-dessous le comparatif complet, puis contactez-nous pour démarrer rapidement.
+          </p>
+
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:14px;">
+            <a class="nav cta" href="/contact/">Demander une soumission</a>
+            <a class="nav cta" href="/services-plus/" style="background: rgba(255,255,255,.06);">Voir Services PLUS</a>
+          </div>
+        </div>
+
+        <div class="hero-img">
+          <img src="/assets/images/forfaits.jpg" alt="Éléments SST en clinique" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container card">
+        <h2>Comparatif des forfaits</h2>
+        <p>Collez ici votre tableau des forfaits (HTML) ou insérez une image/tableau si vous préférez.</p>
+
+        <!-- OPTION A: Paste your HTML table here -->
+        <!--
+        <div style="overflow:auto; margin-top:12px;">
+          ... votre tableau ...
+        </div>
+        -->
+
+        <!-- OPTION B: Use an image (replace filename) -->
+        <!--
+        <div style="margin-top:12px;">
+          <img src="/assets/images/tableau-forfaits.png" alt="Tableau des forfaits Axis" style="width:100%; border-radius:14px; border:1px solid rgba(255,255,255,.10);" />
+        </div>
+        -->
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container card">
+        <h2>Notes importantes</h2>
+        <p>
+          Les forfaits <strong>Vigilance</strong> et <strong>Prêt à l’inspection</strong> sont conçus pour les petites cliniques
+          (1 à 5 employés), disposant d’une trousse de premiers secours unique et présentant des besoins SST limités.
+        </p>
+        <p>
+          Le forfait <strong>Tranquillité Totale</strong> est conçu pour les cliniques de taille moyenne (6 à 15 employés)
+          nécessitant une gestion proactive et un réapprovisionnement structuré.
+        </p>
+        <p>
+          Le forfait <strong>Tranquillité Totale PLUS</strong> est conçu pour les cliniques de grande taille,
+          disposant de plusieurs trousses de premiers secours et recherchant une couverture complète à coût prévisible.
+        </p>
+        <p>
+          Les vérifications SST incluent notamment la vérification visuelle des trousses de premiers secours et des extincteurs
+          (présence, accessibilité et état apparent).
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container card">
+        <h2>Besoin particulier ?</h2>
+        <p>
+          Notre équipe se fera un plaisir de vous proposer une solution personnalisée, adaptée aux besoins spécifiques et à la
+          réalité opérationnelle de votre organisation. Les prix sont sujets à changement sans préavis.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="small-title">Mention de non-responsabilité</div>
+      <div>
+        Axis Conformité & Services n’est pas une autorité réglementaire et ne fournit aucun avis juridique ou médical.
+        L’entreprise ne représente pas le client lors d’inspections ou auprès des autorités compétentes.
+        <br><br>
+        Les services offerts se limitent à la vérification, la documentation, la coordination et le réapprovisionnement,
+        selon les modalités prévues au forfait choisi.
+        <br><br>
+        Aucune inspection certifiée, maintenance, recharge ou remplacement d’extincteurs n’est inclus dans les forfaits
+        (ces services peuvent être offerts séparément, sur demande).
+        <br><br>
+        Tous les remplacements d’électrodes de DEA et d’EpiPen inclus sont strictement basés sur les dates d’expiration
+        et excluent tout remplacement à la suite d’un incident ou d’une utilisation.
+      </div>
+      <div style="margin-top:14px;">
+        © <span id="year"></span> Axis Conformité & Services — info@axisconformite.ca — axisconformite.ca
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
