@@ -325,3 +325,10 @@ h1{
   object-fit:contain;    /* no cropping */
   display:block;
 }
+.section-divider{
+  height:4px;
+  width:100%;
+  background: linear-gradient(90deg, #0b3c5d, #0ea5a4, #22c55e);
+  border-radius:999px;
+  margin:24px 0;
+}
