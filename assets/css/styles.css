@@ -152,3 +152,8 @@ h1{
 @media (max-width: 900px){
   .services-grid{ grid-template-columns:1fr !important; }
 }
+@media (max-width: 900px){
+  .services-grid{
+    grid-template-columns: 1fr !important;
+  }
+}
