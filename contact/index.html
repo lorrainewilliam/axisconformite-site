@@ -30,25 +30,90 @@
   <main>
 
     <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <h1 style="text-transform:uppercase;font-weight:900;">Contactez-nous</h1>
+<section class="hero">
+  <div class="container hero-grid">
 
-          <p class="lead" style="margin-top:6px;font-weight:800;color:#3a3a3a;">
-            Contactez-nous pour sécuriser votre conformité et votre tranquillité d’esprit.
-          </p>
+    <!-- LEFT: title + form -->
+    <div>
+      <h1 style="text-transform:uppercase;font-weight:900;">Contactez-nous</h1>
 
-          <p class="lead" style="margin-bottom:0;">
-            Remplissez le formulaire ci-dessous — nous vous répondrons rapidement.
-          </p>
-        </div>
+      <p class="lead" style="margin-top:6px;font-weight:800;color:#3a3a3a;">
+        Contactez-nous pour sécuriser votre conformité et votre tranquillité d’esprit.
+      </p>
 
-        <div class="hero-img">
-          <img src="/assets/images/contact-hero.jpg" alt="Contact Axis Conformité & Services" />
-        </div>
+      <!-- FORM moved here -->
+      <div style="margin-top:14px;">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact" />
+          <p style="display:none;"><label>Ne pas remplir: <input name="bot-field" /></label></p>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+
+            <div>
+              <label>Nom</label>
+              <input name="nom" required>
+            </div>
+
+            <div>
+              <label>Clinique / Entreprise</label>
+              <input name="entreprise" required>
+            </div>
+
+            <div>
+              <label>Courriel</label>
+              <input type="email" name="email" required>
+            </div>
+
+            <div>
+              <label>Téléphone</label>
+              <input name="telephone">
+            </div>
+
+            <div>
+              <label>Ville</label>
+              <input name="ville" required>
+            </div>
+
+            <div>
+              <label>Type de clinique / entreprise</label>
+              <input name="type" required>
+            </div>
+
+            <div>
+              <label>Nombre d’employés</label>
+              <select name="employes" required>
+                <option value="">Choisir…</option>
+                <option>1–4</option>
+                <option>5–9</option>
+                <option>10–19</option>
+                <option>20+</option>
+              </select>
+            </div>
+
+            <div style="grid-column:1/-1;">
+              <label>Message</label>
+              <textarea name="message" rows="5" required></textarea>
+            </div>
+
+          </div>
+
+          <div style="margin-top:12px;">
+            <button type="submit" class="cta" style="border:none;padding:12px 18px;font-weight:900;border-radius:999px;">
+              Commencer ma conformité
+            </button>
+          </div>
+        </form>
       </div>
-    </section>
+    </div>
+
+    <!-- RIGHT: image -->
+    <div class="hero-img">
+      <img src="/assets/images/contact-hero.jpg" alt="Contact Axis Conformité & Services">
+    </div>
+
+  </div>
+</section>
+
 
     <!-- CONTACT (balanced two-column layout) -->
     <section class="section">
