@@ -308,3 +308,20 @@ h1{
   background:transparent;
 }
 .contact-page .hero-img{ height:360px; }
+/* CONTACT PAGE: free-floating hero image */
+.contact-page .hero-img{
+  border:none;
+  background:transparent;
+  box-shadow:none;
+  overflow:visible;
+  height:auto;            /* let image define its own height */
+  display:block;
+}
+
+.contact-page .hero-img img{
+  width:100%;
+  height:auto;
+  max-height:520px;       /* keeps it elegant, not huge */
+  object-fit:contain;    /* no cropping */
+  display:block;
+}
