@@ -8,6 +8,7 @@
 }
 
 *{box-sizing:border-box}
+
 body{
   margin:0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -18,23 +19,40 @@ body{
 a{color:inherit; text-decoration:none}
 .container{width:min(1100px, 92%); margin:0 auto}
 
+/* HEADER */
 .header{
   position:sticky; top:0; z-index:50;
   backdrop-filter: blur(10px);
   background: rgba(255,255,255,.92);
   border-bottom:1px solid var(--border);
 }
+
 .header-inner{
   display:flex; align-items:center; justify-content:space-between;
-  padding:14px 0;
+  padding:10px 0; /* slightly tighter */
 }
-.brand{display:flex; gap:10px; align-items:center; font-weight:700; letter-spacing:.2px}
-.brand img{height:52px; width:auto}
-.brand span{color:#111111}
+
+.brand{
+  display:flex; gap:10px; align-items:center;
+  font-weight:700; letter-spacing:.2px;
+}
+
+/* MUCH bigger logo */
+.brand img{height:86px; width:auto}
+
+/* remove the repeated text next to the logo */
+.brand span{display:none}
 
 .nav{display:flex; gap:18px; align-items:center; flex-wrap:wrap}
-.nav a{opacity:.92; color:#111111}
+
+/* menu in bold */
+.nav a{
+  opacity:.95;
+  color:#111111;
+  font-weight:800;
+}
 .nav a:hover{opacity:1}
+
 .nav .cta{
   padding:10px 14px;
   border:1px solid var(--border);
@@ -43,15 +61,16 @@ a{color:inherit; text-decoration:none}
   color:#111111;
 }
 
-.hero{
-  padding:56px 0 26px;
-}
+/* HERO + SECTIONS (reduced spacing) */
+.hero{padding:28px 0 10px;}
+
 .hero-grid{
   display:grid;
   grid-template-columns: 1.15fr .85fr;
   gap:24px;
   align-items:center;
 }
+
 .badge{
   display:inline-flex; align-items:center; gap:8px;
   padding:6px 10px; border-radius:999px;
@@ -60,8 +79,19 @@ a{color:inherit; text-decoration:none}
   background: rgba(0,0,0,.03);
   font-size:14px;
 }
-h1{margin:14px 0 10px; font-size: clamp(28px, 3.3vw, 44px); line-height:1.12; color:#1f1f1f}
-.lead{color:var(--muted); font-size:18px; line-height:1.6}
+
+h1{
+  margin:10px 0 10px;
+  font-size: clamp(28px, 3.3vw, 44px);
+  line-height:1.12;
+  color:#1f1f1f;
+}
+
+.lead{
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.6;
+}
 
 .card{
   background: var(--card);
@@ -70,30 +100,40 @@ h1{margin:14px 0 10px; font-size: clamp(28px, 3.3vw, 44px); line-height:1.12; co
   padding:18px;
   box-shadow: 0 6px 22px rgba(0,0,0,.06);
 }
+
 .hero-img{
   border-radius:20px;
   border:1px solid rgba(0,0,0,.10);
   overflow:hidden;
   background:#f3f4f6;
 }
-.hero-img img{width:100%; height:100%; display:block; object-fit:cover; aspect-ratio: 4/3}
+.hero-img img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  aspect-ratio: 4/3;
+}
 
-.section{padding:26px 0}
+.section{padding:12px 0} /* smaller space between containers */
 .section h2{margin:0 0 10px; font-size:22px; color:#1f1f1f}
 .section p{margin:10px 0; color:var(--muted); line-height:1.7}
+
 .list{margin:10px 0 0; padding:0 0 0 18px; color:var(--muted); line-height:1.8}
 
 .footer{
-  margin-top:40px;
+  margin-top:28px;
   border-top:1px solid rgba(0,0,0,.10);
-  background: #ffffff;
+  background:#ffffff;
 }
-.footer-inner{padding:22px 0; color:var(--muted); font-size:14px; line-height:1.6}
-.small-title{color:#111111; font-weight:700; margin-bottom:8px}
+.footer-inner{padding:18px 0; color:var(--muted); font-size:14px; line-height:1.6}
+.small-title{color:#111111; font-weight:800; margin-bottom:8px}
 
 @media (max-width: 900px){
   .hero-grid{grid-template-columns:1fr}
 }
+
+/* 3-image strips on mobile -> stack */
 @media (max-width: 900px){
   .three-img-grid{
     grid-template-columns: 1fr !important;
