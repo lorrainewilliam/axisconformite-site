@@ -29,7 +29,7 @@ a{color:inherit; text-decoration:none}
 
 .header-inner{
   display:flex; align-items:center; justify-content:space-between;
-  padding:10px 0; /* slightly tighter */
+  padding:10px 0;
 }
 
 .brand{
@@ -61,7 +61,7 @@ a{color:inherit; text-decoration:none}
   color:#111111;
 }
 
-/* HERO + SECTIONS (reduced spacing) */
+/* HERO + SECTIONS */
 .hero{padding:28px 0 10px;}
 
 .hero-grid{
@@ -101,14 +101,13 @@ h1{
   box-shadow: 0 6px 22px rgba(0,0,0,.06);
 }
 
+/* HERO IMAGE (fixed height + cover = perfect fit) */
 .hero-img{
   border-radius:20px;
   border:1px solid rgba(0,0,0,.10);
   overflow:hidden;
   background:#f3f4f6;
-}
-.hero-img{
-  height: 420px;           /* pick your desired height */
+  height:420px;            /* adjust: 300 banner / 420 standard / 520 hero */
 }
 
 .hero-img img{
@@ -116,12 +115,11 @@ h1{
   height:100%;
   display:block;
   object-fit: cover;       /* IMPORTANT */
-  object-position: center; /* keep it centered */
-  background: transparent; /* remove gray bars */
+  object-position:center;
+  background: transparent;
 }
 
-
-.section{padding:12px 0} /* smaller space between containers */
+.section{padding:12px 0}
 .section h2{margin:0 0 10px; font-size:22px; color:#1f1f1f}
 .section p{margin:10px 0; color:var(--muted); line-height:1.7}
 
@@ -135,31 +133,19 @@ h1{
 .footer-inner{padding:18px 0; color:var(--muted); font-size:14px; line-height:1.6}
 .small-title{color:#111111; font-weight:800; margin-bottom:8px}
 
+/* RESPONSIVE */
 @media (max-width: 900px){
   .hero-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr !important;}
+  .three-img-grid{grid-template-columns:1fr !important;}
+  .hero-img{height:320px;}  /* slightly shorter on mobile */
 }
 
-/* 3-image strips on mobile -> stack */
-@media (max-width: 900px){
-  .three-img-grid{
-    grid-template-columns: 1fr !important;
-  }
-}
-
-/* Portrait-style credibility images */
+/* STRIP IMAGES (no letterboxing) */
 .strip-img{
   width:100%;
   height:320px;
-  object-fit: contain;
-  background:#f3f4f6;
-  padding:14px;
+  object-fit: cover;        /* IMPORTANT */
+  object-position: center;
   display:block;
-}
-@media (max-width: 900px){
-  .services-grid{ grid-template-columns:1fr !important; }
-}
-@media (max-width: 900px){
-  .services-grid{
-    grid-template-columns: 1fr !important;
-  }
 }
