@@ -332,3 +332,18 @@ h1{
   border-radius:999px;
   margin:24px 0;
 }
+/* Gradient accent line under the top ribbon */
+.header{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,.92);
+  border-bottom: none; /* remove old gray line */
+}
+
+.header::after{
+  content:"";
+  display:block;
+  height:4px;
+  width:100%;
+  background: linear-gradient(90deg, #0b3c5d, #0ea5a4, #22c55e);
+}
