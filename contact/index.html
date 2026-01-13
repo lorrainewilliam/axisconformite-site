@@ -29,7 +29,6 @@
   <main>
 
     <section class="hero">
-      <!-- IMPORTANT: align items to TOP so image starts at same height as title -->
       <div class="container hero-grid" style="align-items:flex-start;">
 
         <div>
@@ -44,7 +43,8 @@
           <div class="contact-grid" style="margin-top:14px; grid-template-columns:1fr;">
 
             <div class="card contact-form-card">
-              <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+              <!-- THANK YOU REDIRECT ADDED -->
+              <form name="contact" method="POST" action="/merci/" data-netlify="true" netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="contact" />
                 <p style="display:none;">
                   <label>Ne pas remplir : <input name="bot-field" /></label>
@@ -124,7 +124,6 @@
           </div>
         </div>
 
-        <!-- Image aligned to the TOP of the grid -->
         <div class="hero-img" style="align-self:flex-start;">
           <img src="/assets/images/contact-hero.jpg" alt="Contact Axis Conformité & Services" />
         </div>
