@@ -37,84 +37,132 @@
           <p class="lead" style="margin-top:6px;font-weight:800;color:#3a3a3a;">
             Contactez-nous pour sécuriser votre conformité et votre tranquillité d’esprit.
           </p>
+
+          <p class="lead" style="margin-bottom:0;">
+            Remplissez le formulaire ci-dessous — nous vous répondrons rapidement.
+          </p>
         </div>
 
         <div class="hero-img">
-          <!-- Changed image -->
           <img src="/assets/images/contact-hero.jpg" alt="Contact Axis Conformité & Services" />
         </div>
       </div>
     </section>
 
-    <!-- FORM -->
+    <!-- CONTACT (balanced two-column layout) -->
     <section class="section">
-      <div class="container card">
+      <div class="container contact-grid">
 
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact" />
-          <p style="display:none;">
-            <label>Ne pas remplir : <input name="bot-field" /></label>
-          </p>
+        <!-- FORM -->
+        <div class="card contact-form-card">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+            <p style="display:none;">
+              <label>Ne pas remplir : <input name="bot-field" /></label>
+            </p>
 
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
 
-            <div>
-              <label style="font-weight:800;">Nom</label>
-              <input name="nom" required style="width:100%;padding:12px;border:1px solid var(--border);border-radius:12px;font:inherit;">
+              <div>
+                <label>Nom</label>
+                <input name="nom" required>
+              </div>
+
+              <div>
+                <label>Clinique / Entreprise</label>
+                <input name="entreprise" required>
+              </div>
+
+              <div>
+                <label>Courriel</label>
+                <input type="email" name="email" required>
+              </div>
+
+              <div>
+                <label>Téléphone</label>
+                <input name="telephone">
+              </div>
+
+              <div>
+                <label>Ville</label>
+                <input name="ville" required>
+              </div>
+
+              <div>
+                <label>Type de clinique / entreprise</label>
+                <input name="type" required placeholder="Ex. dentaire, physio, médicale…">
+              </div>
+
+              <div>
+                <label>Nombre d’employés</label>
+                <select name="employes" required>
+                  <option value="">Choisir…</option>
+                  <option>1–4</option>
+                  <option>5–9</option>
+                  <option>10–19</option>
+                  <option>20+</option>
+                </select>
+              </div>
+
+              <div style="grid-column:1/-1;">
+                <label>Message</label>
+                <textarea name="message" rows="6" required></textarea>
+              </div>
+
             </div>
 
-            <div>
-              <label style="font-weight:800;">Clinique / Entreprise</label>
-              <input name="entreprise" required style="width:100%;padding:12px;border:1px solid var(--border);border-radius:12px;font:inherit;">
+            <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:14px;">
+              <button type="submit" class="cta" style="border:none;padding:12px 18px;font-weight:900;border-radius:999px;cursor:pointer;">
+                Commencer ma conformité
+              </button>
+              <span style="color:var(--muted);font-size:14px;">
+                Réponse rapide pendant les heures ouvrables.
+              </span>
             </div>
 
-            <div>
-              <label style="font-weight:800;">Courriel</label>
-              <input type="email" name="email" required style="width:100%;padding:12px;border:1px solid var(--border);border-radius:12px;font:inherit;">
-            </div>
+          </form>
+        </div>
 
-            <div>
-              <label style="font-weight:800;">Téléphone</label>
-              <input name="telephone" style="width:100%;padding:12px;border:1px solid var(--border);border-radius:12px;font:inherit;">
-            </div>
+        <!-- COORDONNÉES -->
+        <div class="card contact-side">
+          <div style="font-weight:900;color:#111;margin-bottom:10px;">Coordonnées</div>
 
-            <div>
-              <label style="font-weight:800;">Ville</label>
-              <input name="ville" required style="width:100%;padding:12px;border:1px solid var(--border);border-radius:12px;font:inherit;">
-            </div>
-
-            <div>
-              <label style="font-weight:800;">Type de clinique / entreprise</label>
-              <input name="type" required placeholder="Ex. dentaire, physio, médicale…" style="width:100%;padding:12px;border:1px solid var(--border);border-radius:12px;font:inherit;">
-            </div>
-
-            <div>
-              <label style="font-weight:800;">Nombre d’employés</label>
-              <select name="employes" required style="width:100%;padding:12px;border:1px solid var(--border);border-radius:12px;font:inherit;background:#fff;">
-                <option value="">Choisir…</option>
-                <option>1–4</option>
-                <option>5–9</option>
-                <option>10–19</option>
-                <option>20+</option>
-              </select>
-            </div>
-
-            <div style="grid-column:1/-1;">
-              <label style="font-weight:800;">Message</label>
-              <textarea name="message" rows="6" required style="width:100%;padding:12px;border:1px solid var(--border);border-radius:12px;font:inherit;resize:vertical;"></textarea>
-            </div>
-
+          <div style="color:var(--muted);line-height:1.9;">
+            <div><strong>Courriel :</strong> <a href="mailto:info@axisconformite.ca">info@axisconformite.ca</a></div>
+            <div><strong>Téléphone :</strong> <a href="tel:15145614289">514-561-4289</a></div>
           </div>
 
-          <div style="margin-top:14px;">
-            <button type="submit" class="cta" style="border:none;padding:12px 18px;font-weight:900;border-radius:999px;cursor:pointer;">
-              Commencer ma conformité
-            </button>
+          <div style="margin-top:14px; padding-top:14px; border-top:1px solid var(--border); color:var(--muted); line-height:1.7;">
+            <div style="font-weight:900;color:#111;margin-bottom:6px;">À quoi s’attendre</div>
+            <ul class="list" style="margin:0;">
+              <li>Un retour rapide avec 2–3 questions si nécessaire</li>
+              <li>Une recommandation claire du bon forfait</li>
+              <li>Les Services PLUS uniquement si requis</li>
+            </ul>
           </div>
-
-        </form>
+        </div>
 
       </div>
     </section>
 
-    <
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="small-title">Mention de non-responsabilité</div>
+      <div>
+        Axis Conformité & Services n’est pas une autorité réglementaire et ne fournit aucun avis juridique ou médical.
+        L’entreprise ne représente pas le client lors d’inspections ou auprès des autorités compétentes.
+      </div>
+      <div style="margin-top:14px;">
+        © <span id="year"></span> Axis Conformité & Services — info@axisconformite.ca — axisconformite.ca
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
