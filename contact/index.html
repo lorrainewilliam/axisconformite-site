@@ -29,10 +29,11 @@
   <main>
 
     <section class="hero">
-      <div class="container hero-grid">
+      <!-- IMPORTANT: align items to TOP so image starts at same height as title -->
+      <div class="container hero-grid" style="align-items:flex-start;">
 
         <div>
-          <h1 style="text-transform:uppercase;font-weight:900;">Contactez-nous</h1>
+          <h1 style="text-transform:uppercase;font-weight:900;margin-top:0;">Contactez-nous</h1>
 
           <p class="lead" style="margin-top:6px;font-style:italic;line-height:1.5;color:#3a3a3a;">
             Prêt à vous abonner à l’un de nos forfaits ?<br>
@@ -43,7 +44,6 @@
           <div class="contact-grid" style="margin-top:14px; grid-template-columns:1fr;">
 
             <div class="card contact-form-card">
-
               <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="contact" />
                 <p style="display:none;">
@@ -101,7 +101,8 @@
                 </div>
 
                 <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:14px;">
-                  <button type="submit" class="cta" style="border:none;padding:12px 18px;font-weight:900;border-radius:999px;cursor:pointer;">
+                  <button type="submit" class="cta"
+                    style="border:none;padding:12px 20px;font-weight:900;border-radius:999px;cursor:pointer;font-size:18px;line-height:1.1;">
                     Soumettre
                   </button>
                   <span style="color:var(--muted);font-size:14px;">
@@ -110,7 +111,6 @@
                 </div>
 
               </form>
-
             </div>
 
             <div class="card contact-side" style="margin-top:14px;">
@@ -124,7 +124,8 @@
           </div>
         </div>
 
-        <div class="hero-img">
+        <!-- Image aligned to the TOP of the grid -->
+        <div class="hero-img" style="align-self:flex-start;">
           <img src="/assets/images/contact-hero.jpg" alt="Contact Axis Conformité & Services" />
         </div>
 
