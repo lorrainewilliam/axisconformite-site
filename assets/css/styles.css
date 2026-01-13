@@ -149,3 +149,28 @@ h1{
   object-position: center;
   display:block;
 }
+/* Services PLUS - image placeholders */
+.service-plus-card{
+  padding:0;                 /* lets image touch the rounded corners nicely */
+  overflow:hidden;
+}
+
+.service-plus-card .service-plus-body{
+  padding:18px;
+}
+
+.service-plus-img{
+  width:100%;
+  height:180px;              /* consistent height */
+  overflow:hidden;
+  background:#f3f4f6;
+  border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+.service-plus-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
