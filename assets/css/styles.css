@@ -257,3 +257,14 @@ h1{
 @media (max-width: 900px){
   .contact-grid{grid-template-columns:1fr;}
 }
+/* Active nav item */
+.nav a[aria-current="page"]{
+  opacity: 1;
+}
+
+/* Active CTA pill (Contact) */
+.nav .cta[aria-current="page"]{
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
