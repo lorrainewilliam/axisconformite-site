@@ -268,3 +268,14 @@ h1{
   color: #ffffff;
   border-color: var(--accent);
 }
+/* Active nav item */
+.nav a[aria-current="page"]{
+  opacity: 1;
+}
+
+/* Active CTA pill */
+.nav .cta[aria-current="page"]{
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
