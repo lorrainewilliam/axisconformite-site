@@ -279,3 +279,15 @@ h1{
   color: #ffffff;
   border-color: var(--accent);
 }
+/* Force hero images to fill their frame */
+.hero-img{
+  overflow:hidden;
+}
+
+.hero-img img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit: cover;
+  object-position: center;
+}
