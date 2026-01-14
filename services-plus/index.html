@@ -1,201 +1,398 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Services PLUS | Axis Conformité & Services</title>
-  <link rel="stylesheet" href="/assets/css/styles.css" />
-</head>
+:root{
+  --bg:#ffffff;
+  --card:#ffffff;
+  --text:#2b2b2b;
+  --muted:#6b6b6b;
+  --accent:#0a0f1d;
+  --border:rgba(0,0,0,.10);
+}
 
-<body>
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="/mission/">
-        <img src="/assets/images/axis-logo.png" alt="Axis Conformité & Services" />
-        <span>Axis Conformité & Services</span>
-      </a>
+*{box-sizing:border-box}
 
-      <nav class="nav">
-        <a href="/mission/">Notre mission</a>
-        <a href="/approche-axis/">Approche Axis</a>
-        <a href="/forfaits/">Forfaits</a>
-        <a href="/services-plus/" aria-current="page">Services PLUS</a>
-        <a class="cta" href="/contact/">Contact</a>
-      </nav>
-    </div>
-  </header>
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background: var(--bg);
+}
 
-  <main>
+a{color:inherit; text-decoration:none}
+.container{width:min(1100px, 92%); margin:0 auto}
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <h1 style="text-transform:uppercase; font-weight:900;">
-            Services PLUS
-          </h1>
+/* HEADER */
+.header{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,.92);
+  border-bottom: none; /* remove old gray line */
+}
 
-          <p class="lead" style="margin-top:6px; font-weight:800; color:#3a3a3a;">
-            Des services complémentaires, sur demande.
-          </p>
+.header-inner{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:10px 0;
+}
 
-          <p class="lead">
-            Certains besoins SST nécessitent une intervention ponctuelle ou une coordination spécifique.
-            Nous pouvons ajouter ces services à votre forfait, selon votre réalité.
-          </p>
-        </div>
+.brand{
+  display:flex; gap:10px; align-items:center;
+  font-weight:700; letter-spacing:.2px;
+}
 
-        <div class="hero-img">
-          <img src="/assets/images/services-plus.jpg" alt="Coordination SST et services complémentaires" />
-        </div>
-      </div>
-    </section>
+/* LOGO SIZE — make it match your Forfaits page everywhere */
+.brand img{
+  height:64px;            /* ✅ consistent size */
+  width:auto;
+  max-width:none;
+}
 
-    <!-- SERVICES LIST -->
-    <section class="section">
-      <div class="container card">
-        <h2>Nos Services PLUS</h2>
+/* Mobile logo */
+@media (max-width: 900px){
+  .brand img{height:52px;}
+}
 
-        <div class="services-grid">
+/* remove the repeated text next to the logo */
+.brand span{display:none}
 
-          <!-- 1 -->
-          <div class="card service-plus-card" style="box-shadow:none;">
-            <div class="service-plus-body">
-              <h3>Entretien certifié des extincteurs</h3>
-              <p>Coordination et suivi de l’entretien réglementaire effectué par des fournisseurs certifiés.</p>
-            </div>
-            <div class="service-plus-img">
-              <img
-                src="/assets/images/services-plus/entretien-extincteurs.jpg"
-                alt="Entretien certifié d’extincteurs en milieu clinique"
-                loading="lazy"
-              />
-            </div>
-          </div>
+.nav{display:flex; gap:18px; align-items:center; flex-wrap:wrap}
 
-          <!-- 2 -->
-          <div class="card service-plus-card" style="box-shadow:none;">
-            <div class="service-plus-body">
-              <h3>Fourniture et remplacement d’extincteurs</h3>
-              <p>Approvisionnement et remplacement d’extincteurs conformes aux normes applicables.</p>
-            </div>
-            <div class="service-plus-img">
-              <img
-                src="/assets/images/services-plus/fourniture-extincteurs.jpg"
-                alt="Fourniture de différents types et formats d’extincteurs"
-                loading="lazy"
-              />
-            </div>
-          </div>
+/* menu in bold */
+.nav a{
+  opacity:.95;
+  color:#111111;
+  font-weight:800;
+}
+.nav a:hover{opacity:1}
 
-          <!-- 3 -->
-          <div class="card service-plus-card" style="box-shadow:none;">
-            <div class="service-plus-body">
-              <h3>DEA et accessoires</h3>
-              <p>
-                Fourniture de défibrillateurs externes automatisés (DEA) et de leurs accessoires requis
-                (électrodes, batteries, étuis, signalisation).
-              </p>
-            </div>
-            <div class="service-plus-img">
-              <img
-                src="/assets/images/services-plus/dea-accessoires.jpg"
-                alt="DEA et accessoires essentiels : électrodes, étui et matériel d’urgence"
-                loading="lazy"
-              />
-            </div>
-          </div>
+.nav .cta{
+  padding:10px 14px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  background: rgba(10,15,29,.06);
+  color:#111111;
+}
 
-          <!-- 4 -->
-          <div class="card service-plus-card" style="box-shadow:none;">
-            <div class="service-plus-body">
-              <h3>EpiPen additionnels</h3>
-              <p>Approvisionnement d’auto-injecteurs d’épinéphrine supplémentaires, selon les besoins de la clinique.</p>
-            </div>
-            <div class="service-plus-img">
-              <img
-                src="/assets/images/services-plus/epipen.jpg"
-                alt="Approvisionnement d’auto-injecteurs d’épinéphrine de type EpiPen"
-                loading="lazy"
-              />
-            </div>
-          </div>
+/* Active nav item */
+.nav a[aria-current="page"]{
+  opacity: 1;
+}
 
-          <!-- 5 -->
-          <div class="card service-plus-card" style="box-shadow:none;">
-            <div class="service-plus-body">
-              <h3>Coordination de formations SST</h3>
-              <p>
-                Organisation et coordination de formations obligatoires (ex. secourisme en milieu de travail),
-                incluant la gestion logistique avec les organismes de formation.
-              </p>
-            </div>
-            <div class="service-plus-img">
-              <img
-                src="/assets/images/services-plus/formation-sst.jpg"
-                alt="Coordination de formations SST : secourisme, RCR et utilisation du DEA"
-                loading="lazy"
-              />
-            </div>
-          </div>
+/* Active CTA pill */
+.nav .cta[aria-current="page"]{
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
 
-          <!-- 6 -->
-          <div class="card service-plus-card" style="box-shadow:none;">
-            <div class="service-plus-body">
-              <h3>Guide SST personnalisé</h3>
-              <p>
-                Élaboration ou mise à jour d’un guide SST structuré, conforme aux exigences réglementaires
-                et adapté à la réalité spécifique de votre clinique.
-              </p>
-            </div>
-            <div class="service-plus-img">
-              <img
-                src="/assets/images/services-plus/guide-sante-securite.jpg"
-                alt="Guide santé et sécurité professionnel préparé pour une clinique ou une entreprise"
-                loading="lazy"
-              />
-            </div>
-          </div>
+/* Gradient accent line under the top ribbon */
+.header::after{
+  content:"";
+  display:block;
+  height:4px;
+  width:100%;
+  background: linear-gradient(90deg, #0b3c5d, #0ea5a4, #22c55e);
+}
 
-        </div>
+/* HERO + SECTIONS */
+.hero{padding:28px 0 10px;}
 
-        <p style="margin-top:16px; color:var(--muted);">
-          * Les Services PLUS sont facturés séparément et peuvent être ajoutés à votre forfait en tout temps.
-        </p>
-      </div>
-    </section>
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap:24px;
+  align-items:center;
+}
 
-    <!-- CTA -->
-    <section class="section">
-      <div class="container card">
-        <h2>Parlons de vos besoins</h2>
-        <p>
-          Dites-nous ce que vous souhaitez couvrir, et nous vous proposerons la solution la plus simple et efficace.
-        </p>
-        <div style="margin-top:12px;">
-          <a class="nav cta" href="/contact/">Nous contacter</a>
-        </div>
-      </div>
-    </section>
+.badge{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:6px 10px; border-radius:999px;
+  border:1px solid var(--border);
+  color:var(--muted);
+  background: rgba(0,0,0,.03);
+  font-size:14px;
+}
 
-  </main>
+h1{
+  margin:10px 0 10px;
+  font-size: clamp(28px, 3.3vw, 44px);
+  line-height:1.12;
+  color:#1f1f1f;
+}
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="small-title">Mention de non-responsabilité</div>
-      <div>
-        Axis Conformité & Services n’est pas une autorité réglementaire et ne fournit aucun avis juridique ou médical.
-        L’entreprise ne représente pas le client lors d’inspections ou auprès des autorités compétentes.
-      </div>
-      <div style="margin-top:14px;">
-        © <span id="year"></span> Axis Conformité & Services — info@axisconformite.ca — axisconformite.ca
-      </div>
-    </div>
-  </footer>
+.lead{
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.6;
+}
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+.card{
+  background: var(--card);
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius:18px;
+  padding:18px;
+  box-shadow: 0 6px 22px rgba(0,0,0,.06);
+}
 
-</body>
-</html>
+/* HERO IMAGE (fixed height + cover = perfect fit) */
+.hero-img{
+  border-radius:20px;
+  border:1px solid rgba(0,0,0,.10);
+  overflow:hidden;
+  background:#f3f4f6;
+  height:420px;            /* adjust: 300 banner / 420 standard / 520 hero */
+}
+
+.hero-img img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit: cover;       /* IMPORTANT */
+  object-position:center;
+  background: transparent;
+}
+
+.section{padding:12px 0}
+.section h2{margin:0 0 10px; font-size:22px; color:#1f1f1f}
+.section p{margin:10px 0; color:var(--muted); line-height:1.7}
+
+.list{margin:10px 0 0; padding:0 0 0 18px; color:var(--muted); line-height:1.8}
+
+.footer{
+  margin-top:28px;
+  border-top:1px solid rgba(0,0,0,.10);
+  background:#ffffff;
+}
+.footer-inner{padding:18px 0; color:var(--muted); font-size:14px; line-height:1.6}
+.small-title{color:#111111; font-weight:800; margin-bottom:8px}
+
+/* RESPONSIVE */
+@media (max-width: 900px){
+  .hero-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr !important;}
+  .three-img-grid{grid-template-columns:1fr !important;}
+  .hero-img{height:320px;}  /* slightly shorter on mobile */
+}
+
+/* STRIP IMAGES (no letterboxing) */
+.strip-img{
+  width:100%;
+  height:320px;
+  object-fit: cover;        /* IMPORTANT */
+  object-position: center;
+  display:block;
+}
+
+/* ===============================
+   Services PLUS cards (TEXT → IMAGE)
+   =============================== */
+
+.service-plus-card{
+  background: var(--card);
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius:18px;
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  box-shadow:none;
+  overflow:hidden;
+}
+
+/* Text block */
+.service-plus-body{
+  padding:0;
+}
+
+/* Image UNDER the text */
+.service-plus-img{
+  width:100%;
+  height:180px;
+  overflow:hidden;
+  border-radius:12px;
+  background:#f3f4f6;
+  border:1px solid rgba(0,0,0,.08);
+}
+
+/* Image fill */
+.service-plus-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+
+/* SERVICES PLUS — align cards + images (grid version) */
+.services-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  margin-top: 14px !important;
+}
+
+.service-plus-card {
+  box-shadow: none !important;
+  display: flex !important;
+  align-items: stretch !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  padding: 16px !important;
+  min-height: 220px; /* keeps all cards aligned */
+}
+
+.service-plus-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.service-plus-body h3 {
+  margin: 0 0 8px 0;
+}
+
+.service-plus-body p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.service-plus-img {
+  flex: 0 0 220px; /* consistent image column */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-plus-img img {
+  width: 220px;
+  height: 160px;        /* consistent image height */
+  object-fit: cover;    /* clean crop, aligned */
+  border-radius: 12px;
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 860px) {
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .service-plus-card {
+    flex-direction: column !important;
+    min-height: unset;
+  }
+  .service-plus-img {
+    flex: 0 0 auto;
+  }
+  .service-plus-img img {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+/* ===============================
+   CONTACT PAGE (layout + image fit)
+   =============================== */
+
+.contact-grid{
+  display:grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap:14px;
+  align-items:start;
+}
+
+.contact-form-card{
+  box-shadow:none;
+}
+
+.contact-form-card label{
+  display:block;
+  font-weight:800;
+  color:#111;
+  margin:0 0 6px;
+}
+
+.contact-form-card input,
+.contact-form-card select,
+.contact-form-card textarea{
+  width:100%;
+  padding:12px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  font:inherit;
+  background:#fff;
+}
+
+.contact-form-card textarea{resize:vertical;}
+
+.contact-side{
+  box-shadow:none;
+}
+
+@media (max-width: 900px){
+  .contact-grid{grid-template-columns:1fr;}
+}
+
+/* CONTACT PAGE ONLY: free-floating hero image */
+.contact-page .hero-img{
+  border:none;
+  background:transparent;
+  box-shadow:none;
+  overflow:visible;
+  height:auto;            /* let image define its own height */
+  display:block;
+}
+
+.contact-page .hero-img img{
+  width:100%;
+  height:auto;
+  max-height:520px;       /* keeps it elegant, not huge */
+  object-fit:contain;     /* no cropping */
+  display:block;
+}
+
+.section-divider{
+  height:4px;
+  width:100%;
+  background: linear-gradient(90deg, #0b3c5d, #0ea5a4, #22c55e);
+  border-radius:999px;
+  margin:24px 0;
+}
+
+/* Optional service-card grid (if used elsewhere) */
+.services-plus {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  font-size: 1.1rem;
+  margin: 16px;
+  font-weight: 700;
+}
+
+.service-card p {
+  margin: 0 16px 20px;
+  font-size: 0.95rem;
+  color: #555;
+}
