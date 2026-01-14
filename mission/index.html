@@ -6,7 +6,7 @@
   <title>Notre mission | Axis Conformité & Services</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
 
-  <!-- GLOBAL LOGO SIZE (applies to ALL pages that use .brand img) -->
+  <!-- GLOBAL LOGO SIZE (ALL PAGES) -->
   <style>
     .brand img{
       height: 72px !important;
@@ -17,6 +17,25 @@
       .brand img{
         height: 56px !important;
       }
+    }
+
+    /* FORCE CTA BUTTON CONSISTENCY */
+    .cta-button {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-weight: 900;
+      text-decoration: none;
+      cursor: pointer;
+      line-height: 1.1;
+    }
+    .cta-primary {
+      background: var(--accent, #0a0f1d);
+      color: #fff;
+    }
+    .cta-secondary {
+      background: rgba(10,15,29,.06);
+      color: #111;
     }
   </style>
 </head>
@@ -81,13 +100,13 @@
       <div class="container card">
         <h2>Notre mission</h2>
 
-        <!-- Updated mission text (requested) -->
         <p style="font-size:18px; font-weight:800; color:#1f1f1f; margin:8px 0 12px;">
           Réduire les risques, simplifier la conformité et offrir une tranquillité d’esprit complète aux employeurs.
         </p>
 
         <p>
-          Axis Conformité & Services agit comme partenaire de conformité SST. La responsabilité légale finale demeure celle de l’employeur.
+          Axis Conformité & Services agit comme partenaire de conformité SST.
+          La responsabilité légale finale demeure celle de l’employeur.
         </p>
       </div>
     </section>
@@ -95,7 +114,6 @@
     <!-- WHY CLIENTS CALL -->
     <section class="section">
       <div class="container card">
-        <!-- Added (?) (requested) -->
         <h2>Pourquoi nos clients font appel à nos services ?</h2>
 
         <ul class="list">
@@ -115,12 +133,11 @@
           Nous vous guidons vers le forfait le mieux adapté à votre réalité et à votre taille d’organisation.
         </p>
 
-        <!-- Buttons (requested) -->
         <div style="margin-top:12px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="cta" href="/forfaits/" style="display:inline-block; text-decoration:none;">
+          <a href="/forfaits/" class="cta-button cta-primary">
             Voir nos forfaits
           </a>
-          <a href="/contact/" style="display:inline-block; text-decoration:none; padding:12px 18px; border-radius:999px; font-weight:900; background: rgba(10,15,29,.06); color:#111;">
+          <a href="/contact/" class="cta-button cta-secondary">
             Contactez-nous
           </a>
         </div>
