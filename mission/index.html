@@ -6,20 +6,17 @@
   <title>Notre mission | Axis Conformité & Services</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
 
-  <!-- Force bigger logo on ALL pages that include this header -->
+  <!-- GLOBAL LOGO SIZE (applies to ALL pages that use .brand img) -->
   <style>
     .brand img{
       height: 72px !important;
       width: auto !important;
       max-width: none !important;
-      display:block;
     }
-    /* keep header alignment nice when logo grows */
-    .header-inner{
-      align-items: center;
-    }
-    .brand{
-      gap: 12px;
+    @media (max-width: 860px){
+      .brand img{
+        height: 56px !important;
+      }
     }
   </style>
 </head>
@@ -84,7 +81,7 @@
       <div class="container card">
         <h2>Notre mission</h2>
 
-        <!-- Updated text exactly as requested -->
+        <!-- Updated mission text (requested) -->
         <p style="font-size:18px; font-weight:800; color:#1f1f1f; margin:8px 0 12px;">
           Réduire les risques, simplifier la conformité et offrir une tranquillité d’esprit complète aux employeurs.
         </p>
@@ -98,7 +95,7 @@
     <!-- WHY CLIENTS CALL -->
     <section class="section">
       <div class="container card">
-        <!-- Added (?) as requested -->
+        <!-- Added (?) (requested) -->
         <h2>Pourquoi nos clients font appel à nos services ?</h2>
 
         <ul class="list">
@@ -118,19 +115,18 @@
           Nous vous guidons vers le forfait le mieux adapté à votre réalité et à votre taille d’organisation.
         </p>
 
-        <!-- Buttons (created) -->
+        <!-- Buttons (requested) -->
         <div style="margin-top:12px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="cta" href="/forfaits/" style="display:inline-flex; align-items:center; justify-content:center; text-decoration:none;">
+          <a class="cta" href="/forfaits/" style="display:inline-block; text-decoration:none;">
             Voir nos forfaits
           </a>
-
-          <a href="/contact/"
-             style="display:inline-flex; align-items:center; justify-content:center; text-decoration:none; padding:12px 20px; border-radius:999px; font-weight:900; background: rgba(10,15,29,.06); color:#111;">
+          <a href="/contact/" style="display:inline-block; text-decoration:none; padding:12px 18px; border-radius:999px; font-weight:900; background: rgba(10,15,29,.06); color:#111;">
             Contactez-nous
           </a>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
