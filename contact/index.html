@@ -32,7 +32,9 @@
       <div class="container hero-grid" style="align-items:flex-start;">
 
         <div>
-          <h1 style="text-transform:uppercase;font-weight:900;margin-top:0;">Contactez-nous</h1>
+          <h1 style="text-transform:uppercase;font-weight:900;margin-top:0;">
+            Contactez-nous
+          </h1>
 
           <p class="lead" style="margin-top:6px;font-style:italic;line-height:1.5;color:#3a3a3a;">
             Prêt à vous abonner à l’un de nos forfaits ?<br>
@@ -43,48 +45,101 @@
           <div class="contact-grid" style="margin-top:14px; grid-template-columns:1fr;">
 
             <div class="card contact-form-card">
-              <!-- THANK YOU REDIRECT ADDED -->
-              <form name="contact" method="POST" action="/merci/" data-netlify="true" netlify-honeypot="bot-field">
+
+              <!-- NETLIFY FORM (SECURED) -->
+              <form
+                name="contact"
+                method="POST"
+                action="/merci/"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+              >
+                <!-- Required Netlify form identifier -->
                 <input type="hidden" name="form-name" value="contact" />
+
+                <!-- Honeypot field (anti-spam) -->
                 <p style="display:none;">
-                  <label>Ne pas remplir : <input name="bot-field" /></label>
+                  <label>Ne pas remplir :
+                    <input type="text" name="bot-field" autocomplete="off">
+                  </label>
                 </p>
 
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
 
                   <div>
-                    <label>Nom</label>
-                    <input name="nom" required>
+                    <label for="nom">Nom</label>
+                    <input
+                      id="nom"
+                      type="text"
+                      name="nom"
+                      autocomplete="name"
+                      required
+                    >
                   </div>
 
                   <div>
-                    <label>Clinique / Entreprise</label>
-                    <input name="entreprise" required>
+                    <label for="entreprise">Clinique / Entreprise</label>
+                    <input
+                      id="entreprise"
+                      type="text"
+                      name="entreprise"
+                      autocomplete="organization"
+                      required
+                    >
                   </div>
 
                   <div>
-                    <label>Courriel</label>
-                    <input type="email" name="email" required>
+                    <label for="email">Courriel</label>
+                    <input
+                      id="email"
+                      type="email"
+                      name="email"
+                      autocomplete="email"
+                      required
+                    >
                   </div>
 
                   <div>
-                    <label>Téléphone</label>
-                    <input name="telephone">
+                    <label for="telephone">Téléphone</label>
+                    <input
+                      id="telephone"
+                      type="tel"
+                      name="telephone"
+                      autocomplete="tel"
+                    >
                   </div>
 
                   <div>
-                    <label>Ville</label>
-                    <input name="ville" required>
+                    <label for="ville">Ville</label>
+                    <input
+                      id="ville"
+                      type="text"
+                      name="ville"
+                      autocomplete="address-level2"
+                      required
+                    >
                   </div>
 
                   <div>
-                    <label>Type de clinique / entreprise</label>
-                    <input name="type" required placeholder="Ex. dentaire, physio, médicale…">
+                    <label for="type">Type de clinique / entreprise</label>
+                    <input
+                      id="type"
+                      type="text"
+                      name="type"
+                      placeholder="Ex. dentaire, physio, médicale…"
+                      autocomplete="off"
+                      required
+                    >
                   </div>
 
                   <div>
-                    <label>Nombre d’employés</label>
-                    <select name="employes" required>
+                    <label for="employes">Nombre d’employés</label>
+                    <select
+                      id="employes"
+                      name="employes"
+                      autocomplete="off"
+                      required
+                    >
                       <option value="">Choisir…</option>
                       <option>1–4</option>
                       <option>5–9</option>
@@ -94,17 +149,26 @@
                   </div>
 
                   <div style="grid-column:1/-1;">
-                    <label>Message</label>
-                    <textarea name="message" rows="6" required></textarea>
+                    <label for="message">Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="6"
+                      required
+                    ></textarea>
                   </div>
 
                 </div>
 
                 <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:14px;">
-                  <button type="submit" class="cta"
-                    style="border:none;padding:12px 20px;font-weight:900;border-radius:999px;cursor:pointer;font-size:18px;line-height:1.1;">
+                  <button
+                    type="submit"
+                    class="cta"
+                    style="border:none;padding:12px 20px;font-weight:900;border-radius:999px;cursor:pointer;font-size:18px;line-height:1.1;"
+                  >
                     Soumettre
                   </button>
+
                   <span style="color:var(--muted);font-size:14px;">
                     Réponse rapide pendant les heures ouvrables.
                   </span>
@@ -114,10 +178,18 @@
             </div>
 
             <div class="card contact-side" style="margin-top:14px;">
-              <div style="font-weight:900;color:#111;margin-bottom:10px;">Coordonnées</div>
+              <div style="font-weight:900;color:#111;margin-bottom:10px;">
+                Coordonnées
+              </div>
               <div style="color:var(--muted);line-height:1.9;">
-                <div><strong>Courriel :</strong> <a href="mailto:info@axisconformite.ca">info@axisconformite.ca</a></div>
-                <div><strong>Téléphone :</strong> <a href="tel:15145614289">514-561-4289</a></div>
+                <div>
+                  <strong>Courriel :</strong>
+                  <a href="mailto:info@axisconformite.ca">info@axisconformite.ca</a>
+                </div>
+                <div>
+                  <strong>Téléphone :</strong>
+                  <a href="tel:15145614289">514-561-4289</a>
+                </div>
               </div>
             </div>
 
