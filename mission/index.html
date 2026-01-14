@@ -5,15 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Notre mission | Axis Conformité & Services</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <!-- Force bigger logo on ALL pages that include this header -->
+  <style>
+    .brand img{
+      height: 72px !important;
+      width: auto !important;
+      max-width: none !important;
+      display:block;
+    }
+    /* keep header alignment nice when logo grows */
+    .header-inner{
+      align-items: center;
+    }
+    .brand{
+      gap: 12px;
+    }
+  </style>
 </head>
 
 <body>
   <header class="header">
     <div class="container header-inner">
       <a class="brand" href="/mission/">
-        <!-- Logo bigger -->
-        <img src="/assets/images/axis-logo.png" alt="Axis Conformité & Services"
-             style="height:64px; width:auto; max-width:none;" />
+        <img src="/assets/images/axis-logo.png" alt="Axis Conformité & Services" />
         <span>Axis Conformité & Services</span>
       </a>
 
@@ -40,7 +55,6 @@
             Prêts pour une inspection, en tout temps.
           </p>
 
-          <!-- Updated text (requested) -->
           <p class="lead">
             Axis Conformité & Services est une entreprise québécoise qui accompagne les entreprises et les cliniques
             dans la gestion proactive de leurs obligations réglementaires en matière de santé et sécurité au travail (SST).
@@ -70,13 +84,13 @@
       <div class="container card">
         <h2>Notre mission</h2>
 
+        <!-- Updated text exactly as requested -->
         <p style="font-size:18px; font-weight:800; color:#1f1f1f; margin:8px 0 12px;">
-          Réduire le risque, simplifier la conformité — et offrir une tranquillité d’esprit complète aux employeurs.
+          Réduire les risques, simplifier la conformité et offrir une tranquillité d’esprit complète aux employeurs.
         </p>
 
         <p>
-          Axis Conformité & Services est une entreprise québécoise et agit comme partenaire de conformité SST.
-          La responsabilité légale finale demeure celle de l’employeur.
+          Axis Conformité & Services agit comme partenaire de conformité SST. La responsabilité légale finale demeure celle de l’employeur.
         </p>
       </div>
     </section>
@@ -84,9 +98,9 @@
     <!-- WHY CLIENTS CALL -->
     <section class="section">
       <div class="container card">
-        <h2>Pourquoi nos clients font appel à nos services</h2>
+        <!-- Added (?) as requested -->
+        <h2>Pourquoi nos clients font appel à nos services ?</h2>
 
-        <!-- Updated bullet points (requested) -->
         <ul class="list">
           <li>Réduire les risques de non-conformité qui peuvent mettre les employés en danger et coûter très cher</li>
           <li>Éviter les ordonnances répétées de la CNESST</li>
@@ -99,16 +113,19 @@
     <!-- CTA -->
     <section class="section">
       <div class="container card">
-        <!-- Updated CTA title (requested) -->
         <h2>Prêt à nous confier votre conformité et à vous concentrer sur ce qui compte vraiment ?</h2>
         <p>
           Nous vous guidons vers le forfait le mieux adapté à votre réalité et à votre taille d’organisation.
         </p>
 
-        <!-- Updated buttons (requested) -->
+        <!-- Buttons (created) -->
         <div style="margin-top:12px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="nav cta" href="/forfaits/">Voir nos forfaits</a>
-          <a class="nav cta" href="/contact/" style="background: rgba(10,15,29,.06);">
+          <a class="cta" href="/forfaits/" style="display:inline-flex; align-items:center; justify-content:center; text-decoration:none;">
+            Voir nos forfaits
+          </a>
+
+          <a href="/contact/"
+             style="display:inline-flex; align-items:center; justify-content:center; text-decoration:none; padding:12px 20px; border-radius:999px; font-weight:900; background: rgba(10,15,29,.06); color:#111;">
             Contactez-nous
           </a>
         </div>
