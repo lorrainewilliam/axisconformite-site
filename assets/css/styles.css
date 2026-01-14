@@ -396,3 +396,21 @@ h1{
   font-size: 0.95rem;
   color: #555;
 }
+/* ======================================
+   GLOBAL LOGO SIZE — FORCE ALL PAGES
+   ====================================== */
+
+.header .brand img,
+.brand img {
+  height: 64px !important;
+  width: auto !important;
+  max-width: none !important;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .header .brand img,
+  .brand img {
+    height: 52px !important;
+  }
+}
