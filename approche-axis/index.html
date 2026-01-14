@@ -6,14 +6,19 @@
   <title>Approche Axis | Axis Conformité & Services</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
 
-  <!-- Make the 3 credibility images smaller (NOT the hero) -->
+  <!-- Page-specific fix: smaller credibility images WITHOUT cropping -->
   <style>
     .three-img-grid .strip-img{
-      height: 220px; /* smaller than before */
+      height: 220px;              /* smaller */
+      object-fit: contain;        /* NO cropping */
+      background: #f3f4f6;        /* clean neutral backdrop */
+      padding: 14px;              /* intentional framing */
     }
+
     @media (max-width: 900px){
       .three-img-grid .strip-img{
         height: 200px;
+        padding: 12px;
       }
     }
   </style>
@@ -81,7 +86,7 @@
       </div>
     </section>
 
-    <!-- HOW IT WORKS -->
+    <!-- APPROACH -->
     <section class="section">
       <div class="container card">
         <h2>Notre approche</h2>
