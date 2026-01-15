@@ -19,23 +19,30 @@
       }
     }
 
-    /* FORCE CTA BUTTON CONSISTENCY */
+    /* CTA BUTTONS — PREMIUM GRADIENT (CONSISTENT) */
     .cta-button {
       display: inline-block;
-      padding: 12px 20px;
+      padding: 14px 26px;
       border-radius: 999px;
       font-weight: 900;
       text-decoration: none;
       cursor: pointer;
       line-height: 1.1;
-    }
-    .cta-primary {
-      background: var(--accent, #0a0f1d);
       color: #fff;
+      background: linear-gradient(
+        135deg,
+        #0a3d2f 0%,
+        #0f6f55 45%,
+        #1a8f6a 100%
+      );
+      box-shadow: 0 10px 24px rgba(15, 111, 85, 0.28);
+      transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
     }
-    .cta-secondary {
-      background: rgba(10,15,29,.06);
-      color: #111;
+
+    .cta-button:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(15, 111, 85, 0.38);
+      filter: brightness(1.05);
     }
   </style>
 </head>
@@ -81,12 +88,6 @@
             Vos employés peuvent ainsi se concentrer sur leurs priorités, vous évitez la formation continue liée au roulement
             de personnel et réduisez les risques d’erreurs coûteuses dans un domaine qui n’est pas leur spécialité.
           </p>
-
-          <p class="lead">
-            Lorsque la conformité est confiée au gestionnaire immobilier, les vérifications sont souvent partielles
-            ou inadaptées à votre secteur, alors que les réglementations sont très spécifiques, changent fréquemment
-            et que toute non-conformité peut entraîner des pénalités importantes.
-          </p>
         </div>
 
         <div class="hero-img">
@@ -120,7 +121,7 @@
           <li>Réduire les risques de non-conformité qui peuvent mettre les employés en danger et coûter très cher</li>
           <li>Éviter les ordonnances répétées de la CNESST</li>
           <li>Faire gagner un temps précieux aux employés et aux gestionnaires</li>
-          <li>Clarifier la responsabilité de conformité pour qu’elle relève clairement d’un propriétaire et éviter les zones grises</li>
+          <li>Clarifier la responsabilité de conformité pour qu’elle relève clairement de l’employeur et éviter les zones grises</li>
         </ul>
       </div>
     </section>
@@ -133,11 +134,11 @@
           Nous vous guidons vers le forfait le mieux adapté à votre réalité et à votre taille d’organisation.
         </p>
 
-        <div style="margin-top:12px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a href="/forfaits/" class="cta-button cta-primary">
+        <div style="margin-top:16px; display:flex; gap:14px; flex-wrap:wrap;">
+          <a href="/forfaits/" class="cta-button">
             Voir nos forfaits
           </a>
-          <a href="/contact/" class="cta-button cta-secondary">
+          <a href="/contact/" class="cta-button">
             Contactez-nous
           </a>
         </div>
