@@ -8,31 +8,7 @@
   <link rel="stylesheet" href="/assets/css/styles.css" />
 
   <style>
-    /* 3 images under the table: smaller, NOT cropped, NOT framed */
-    .forfaits-three-img-grid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:16px;
-      margin-top:16px;
-    }
-    .forfaits-three-img-grid img{
-      width:100%;
-      height:240px;         /* bigger than last time (readable) */
-      object-fit:contain;   /* NOT cropped */
-      object-position:center;
-      display:block;
-      background:transparent; /* NOT framed */
-    }
-    @media (max-width: 900px){
-      .forfaits-three-img-grid{
-        grid-template-columns:1fr;
-      }
-      .forfaits-three-img-grid img{
-        height:240px;
-      }
-    }
-
-    /* Table image: always visible + responsive */
+    /* TABLE IMAGE */
     .forfaits-table-img{
       width:100%;
       height:auto;
@@ -40,6 +16,34 @@
       border-radius:14px;
       border:1px solid rgba(0,0,0,.10);
       box-shadow:0 6px 22px rgba(0,0,0,.06);
+    }
+
+    /* 3 IMAGES UNDER TABLE — BIGGER, CLOSER, ROUNDED */
+    .forfaits-three-img-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:10px;                 /* closer together */
+      margin-top:18px;
+    }
+
+    .forfaits-three-img-grid img{
+      width:100%;
+      height:300px;             /* bigger */
+      object-fit:contain;       /* not cropped */
+      object-position:center;
+      display:block;
+      background:transparent;
+      border-radius:16px;       /* rounded edges */
+    }
+
+    @media (max-width: 900px){
+      .forfaits-three-img-grid{
+        grid-template-columns:1fr;
+        gap:14px;
+      }
+      .forfaits-three-img-grid img{
+        height:260px;
+      }
     }
   </style>
 </head>
@@ -70,16 +74,14 @@
         <h1 style="text-transform:uppercase; font-weight:900; margin-bottom:8px;">
           Des forfaits bien conçus, selon votre réalité.
         </h1>
-        <!-- Deleted the 2 lines you asked to remove -->
       </div>
     </section>
 
-    <!-- TABLE FIRST (main highlight) -->
+    <!-- TABLE FIRST -->
     <section class="section">
       <div class="container card">
         <h2 style="margin:0 0 10px;">Comparatif des forfaits</h2>
 
-        <!-- ✅ TABLE IMAGE (exact path, no guessing, no placeholder) -->
         <img
           class="forfaits-table-img"
           src="/assets/images/forfaits-table.jpg"
@@ -87,19 +89,17 @@
           loading="eager"
         >
 
-        <!-- moved sentence under the table -->
         <p style="margin-top:14px; color:var(--muted); font-style:italic;">
           * Les prix sont sujet à changement sans préavis
         </p>
 
-        <!-- Button under the sentence -->
         <div style="margin-top:12px;">
           <a class="cta" href="/contact/">Abonnez-vous</a>
         </div>
       </div>
     </section>
 
-    <!-- 3 IMAGES BELOW (smaller, not cropped, not framed) -->
+    <!-- 3 IMAGES BELOW TABLE -->
     <section class="section">
       <div class="container">
         <div class="forfaits-three-img-grid">
@@ -119,8 +119,7 @@
           Nous pouvons ajouter des services complémentaires à votre forfait, selon votre réalité.
         </p>
 
-        <!-- Removed the price sentence from here (already moved above) -->
-        <div style="margin-top:12px; display:flex; gap:12px; flex-wrap:wrap;">
+        <div style="margin-top:12px;">
           <a class="cta" href="/services-plus/">Découvrir nos services PLUS</a>
         </div>
       </div>
