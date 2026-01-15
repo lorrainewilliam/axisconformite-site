@@ -8,15 +8,15 @@
   <link rel="stylesheet" href="/assets/css/styles.css" />
 
   <style>
-    /* Gradient button (matches header accent + forfaits buttons) */
+    /* Refined gradient button (aligned with site accent) */
     .btn-gradient{
       display:inline-block;
-      padding:14px 22px;
+      padding:14px 24px;
       border-radius:999px;
       font-weight:900;
       color:#ffffff;
       text-decoration:none;
-      background: linear-gradient(90deg, #0b3c5d, #0ea5a4, #22c55e);
+      background: linear-gradient(90deg, #0b3c5d, #0ea5a4, #2f855a);
       box-shadow: 0 10px 26px rgba(14,165,164,.35);
       transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
     }
@@ -26,7 +26,22 @@
       opacity:.95;
     }
 
-    /* Services PLUS cards: premium look, no gray container feel */
+    /* Hero vertical alignment */
+    .hero-grid{
+      align-items:flex-start !important;
+    }
+
+    .hero-left{
+      display:flex;
+      flex-direction:column;
+      height:100%;
+    }
+
+    .hero-spacer{
+      flex:1;
+    }
+
+    /* Services PLUS cards (premium) */
     .services-grid{
       display:grid !important;
       grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -43,8 +58,6 @@
       padding:0 !important;
       display:flex !important;
       flex-direction:column !important;
-      gap:0 !important;
-      min-height: 0;
     }
 
     .service-plus-body{
@@ -69,23 +82,22 @@
       overflow:hidden;
       background:#f3f4f6;
       border-top:1px solid rgba(0,0,0,.08);
-      display:block !important;
-      flex: 0 0 auto !important;
     }
 
     .service-plus-img img{
       width:100%;
       height:100%;
-      object-fit:cover; /* premium look */
+      object-fit:cover;
       object-position:center;
       display:block;
     }
 
     @media (max-width: 900px){
       .services-grid{
-        grid-template-columns: 1fr !important;
+        grid-template-columns:1fr !important;
       }
       .service-plus-img{height:220px;}
+      .hero-spacer{display:none;}
     }
   </style>
 </head>
@@ -113,7 +125,9 @@
     <!-- HERO -->
     <section class="hero">
       <div class="container hero-grid">
-        <div>
+
+        <!-- LEFT -->
+        <div class="hero-left">
           <h1 style="text-transform:uppercase; font-weight:900;">
             Services PLUS
           </h1>
@@ -128,15 +142,19 @@
             selon votre réalité opérationnelle.
           </p>
 
-          <!-- NEW GRADIENT BUTTON -->
-          <div style="margin-top:14px;">
+          <!-- spacer pushes button down -->
+          <div class="hero-spacer"></div>
+
+          <div>
             <a class="btn-gradient" href="/contact/">Demandez une soumission</a>
           </div>
         </div>
 
+        <!-- RIGHT -->
         <div class="hero-img">
           <img src="/assets/images/services-plus.jpg" alt="Services complémentaires SST" />
         </div>
+
       </div>
     </section>
 
@@ -147,98 +165,63 @@
 
         <div class="services-grid">
 
-          <!-- 1 -->
           <div class="service-plus-card">
             <div class="service-plus-body">
               <h3>Entretien certifié des extincteurs</h3>
-              <p>
-                Coordination et suivi de l’entretien réglementaire des extincteurs,
-                effectué par des fournisseurs certifiés.
-              </p>
+              <p>Coordination et suivi de l’entretien réglementaire des extincteurs.</p>
             </div>
             <div class="service-plus-img">
-              <img src="/assets/images/services-plus/entretien-extincteurs.jpg"
-                   alt="Entretien certifié des extincteurs en milieu de travail"
-                   loading="lazy">
+              <img src="/assets/images/services-plus/entretien-extincteurs.jpg" alt="">
             </div>
           </div>
 
-          <!-- 2 (UPDATED TITLE) -->
           <div class="service-plus-card">
             <div class="service-plus-body">
               <h3>Achat et remplacement d’extincteurs</h3>
-              <p>
-                Approvisionnement et remplacement d’extincteurs conformes
-                aux normes et exigences applicables.
-              </p>
+              <p>Approvisionnement et remplacement d’extincteurs conformes.</p>
             </div>
             <div class="service-plus-img">
-              <img src="/assets/images/services-plus/fourniture-extincteurs.jpg"
-                   alt="Différents types et formats d’extincteurs"
-                   loading="lazy">
+              <img src="/assets/images/services-plus/fourniture-extincteurs.jpg" alt="">
             </div>
           </div>
 
-          <!-- 3 -->
           <div class="service-plus-card">
             <div class="service-plus-body">
               <h3>Coordination de formations SST</h3>
-              <p>
-                Organisation et coordination de formations obligatoires,
-                incluant le secourisme, le RCR et l’utilisation du DEA.
-              </p>
+              <p>Organisation de formations en secourisme, RCR et DEA.</p>
             </div>
             <div class="service-plus-img">
-              <img src="/assets/images/services-plus/formation-sst.jpg"
-                   alt="Formation SST, secourisme, RCR et DEA"
-                   loading="lazy">
+              <img src="/assets/images/services-plus/formation-sst.jpg" alt="">
             </div>
           </div>
 
-          <!-- 4 (UPDATED TITLE) -->
           <div class="service-plus-card">
             <div class="service-plus-body">
               <h3>Achat et installation d’appareils DEA et accessoires</h3>
-              <p>
-                Fourniture de défibrillateurs externes automatisés (DEA)
-                et des accessoires requis (électrodes, batteries, étuis, signalisation).
-              </p>
+              <p>Fourniture de DEA et accessoires requis.</p>
             </div>
             <div class="service-plus-img">
-              <img src="/assets/images/services-plus/dea-accessoires.jpg"
-                   alt="DEA et accessoires de sécurité"
-                   loading="lazy">
+              <img src="/assets/images/services-plus/dea-accessoires.jpg" alt="">
             </div>
           </div>
 
-          <!-- 5 (UPDATED TITLE + EXPLANATION) -->
           <div class="service-plus-card">
             <div class="service-plus-body">
               <h3>Approvisionnement d’auto-injecteurs</h3>
-              <p>
-                Approvisionnement d’auto-injecteurs d’épinéphrine supplémentaires, selon les besoins.
-              </p>
+              <p>Auto-injecteurs d’épinéphrine supplémentaires selon les besoins.</p>
             </div>
             <div class="service-plus-img">
-              <img src="/assets/images/services-plus/epipen.jpg"
-                   alt="Auto-injecteurs d’épinéphrine"
-                   loading="lazy">
+              <img src="/assets/images/services-plus/epipen.jpg" alt="">
             </div>
           </div>
 
-          <!-- 6 -->
           <div class="service-plus-card">
             <div class="service-plus-body">
               <h3>Guide SST personnalisé</h3>
-              <p>
-                Élaboration ou mise à jour d’un guide SST structuré,
-                conforme aux exigences réglementaires et adapté à votre réalité.
-              </p>
+              <p>Guide SST structuré et adapté à votre réalité.</p>
             </div>
             <div class="service-plus-img">
-              <img src="/assets/images/services-plus/guide-sante-securite.jpg"
-                   alt="Guide santé et sécurité personnalisé"
-                   loading="lazy">
+              <img src="/assets/images/services-plus/guide-sante-securite.jpg" alt="">
             </div>
           </div>
 
@@ -250,8 +233,6 @@
       </div>
     </section>
 
-    <!-- CTA SECTION REMOVED as requested -->
-
   </main>
 
   <footer class="footer">
@@ -259,10 +240,9 @@
       <div class="small-title">Mention de non-responsabilité</div>
       <div>
         Axis Conformité & Services n’est pas une autorité réglementaire et ne fournit aucun avis juridique ou médical.
-        L’entreprise ne représente pas le client lors d’inspections ou auprès des autorités compétentes.
       </div>
       <div style="margin-top:14px;">
-        © <span id="year"></span> Axis Conformité & Services — info@axisconformite.ca — axisconformite.ca
+        © <span id="year"></span> Axis Conformité & Services
       </div>
     </div>
   </footer>
