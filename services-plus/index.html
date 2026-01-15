@@ -6,6 +6,88 @@
   <title>Services PLUS | Axis Conformité & Services</title>
   <meta name="description" content="Services complémentaires en santé et sécurité au travail : extincteurs, DEA, formations, EpiPen et guides SST." />
   <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <style>
+    /* Gradient button (matches header accent + forfaits buttons) */
+    .btn-gradient{
+      display:inline-block;
+      padding:14px 22px;
+      border-radius:999px;
+      font-weight:900;
+      color:#ffffff;
+      text-decoration:none;
+      background: linear-gradient(90deg, #0b3c5d, #0ea5a4, #22c55e);
+      box-shadow: 0 10px 26px rgba(14,165,164,.35);
+      transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+    }
+    .btn-gradient:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 14px 34px rgba(14,165,164,.45);
+      opacity:.95;
+    }
+
+    /* Services PLUS cards: premium look, no gray container feel */
+    .services-grid{
+      display:grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap:16px !important;
+      margin-top:14px !important;
+    }
+
+    .service-plus-card{
+      border:1px solid rgba(0,0,0,.10);
+      border-radius:18px;
+      background:#fff;
+      box-shadow: 0 10px 28px rgba(0,0,0,.06);
+      overflow:hidden;
+      padding:0 !important;
+      display:flex !important;
+      flex-direction:column !important;
+      gap:0 !important;
+      min-height: 0;
+    }
+
+    .service-plus-body{
+      padding:18px 18px 14px 18px !important;
+    }
+
+    .service-plus-body h3{
+      margin:0 0 8px 0;
+      font-weight:900;
+      color:#111;
+    }
+
+    .service-plus-body p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.6;
+    }
+
+    .service-plus-img{
+      width:100%;
+      height:210px;
+      overflow:hidden;
+      background:#f3f4f6;
+      border-top:1px solid rgba(0,0,0,.08);
+      display:block !important;
+      flex: 0 0 auto !important;
+    }
+
+    .service-plus-img img{
+      width:100%;
+      height:100%;
+      object-fit:cover; /* premium look */
+      object-position:center;
+      display:block;
+    }
+
+    @media (max-width: 900px){
+      .services-grid{
+        grid-template-columns: 1fr !important;
+      }
+      .service-plus-img{height:220px;}
+    }
+  </style>
 </head>
 
 <body>
@@ -45,6 +127,11 @@
             ou une coordination spécifique. Ces services peuvent être ajoutés à votre forfait,
             selon votre réalité opérationnelle.
           </p>
+
+          <!-- NEW GRADIENT BUTTON -->
+          <div style="margin-top:14px;">
+            <a class="btn-gradient" href="/contact/">Demandez une soumission</a>
+          </div>
         </div>
 
         <div class="hero-img">
@@ -76,10 +163,10 @@
             </div>
           </div>
 
-          <!-- 2 -->
+          <!-- 2 (UPDATED TITLE) -->
           <div class="service-plus-card">
             <div class="service-plus-body">
-              <h3>Fourniture et remplacement d’extincteurs</h3>
+              <h3>Achat et remplacement d’extincteurs</h3>
               <p>
                 Approvisionnement et remplacement d’extincteurs conformes
                 aux normes et exigences applicables.
@@ -108,10 +195,10 @@
             </div>
           </div>
 
-          <!-- 4 -->
+          <!-- 4 (UPDATED TITLE) -->
           <div class="service-plus-card">
             <div class="service-plus-body">
-              <h3>DEA et accessoires</h3>
+              <h3>Achat et installation d’appareils DEA et accessoires</h3>
               <p>
                 Fourniture de défibrillateurs externes automatisés (DEA)
                 et des accessoires requis (électrodes, batteries, étuis, signalisation).
@@ -124,18 +211,17 @@
             </div>
           </div>
 
-          <!-- 5 -->
+          <!-- 5 (UPDATED TITLE + EXPLANATION) -->
           <div class="service-plus-card">
             <div class="service-plus-body">
-              <h3>EpiPen additionnels</h3>
+              <h3>Approvisionnement d’auto-injecteurs</h3>
               <p>
-                Approvisionnement d’auto-injecteurs d’épinéphrine supplémentaires,
-                selon les besoins spécifiques de la clinique ou de l’entreprise.
+                Approvisionnement d’auto-injecteurs d’épinéphrine supplémentaires, selon les besoins.
               </p>
             </div>
             <div class="service-plus-img">
               <img src="/assets/images/services-plus/epipen.jpg"
-                   alt="Auto-injecteurs d’épinéphrine EpiPen"
+                   alt="Auto-injecteurs d’épinéphrine"
                    loading="lazy">
             </div>
           </div>
@@ -164,20 +250,7 @@
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="section">
-      <div class="container card">
-        <h2>Besoin d’un service spécifique ?</h2>
-        <p>
-          Expliquez-nous votre situation et nous vous proposerons la solution
-          la plus simple et la plus efficace.
-        </p>
-
-        <div style="margin-top:12px;">
-          <a class="cta" href="/contact/">Contactez-nous</a>
-        </div>
-      </div>
-    </section>
+    <!-- CTA SECTION REMOVED as requested -->
 
   </main>
 
