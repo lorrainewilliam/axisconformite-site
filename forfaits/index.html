@@ -8,20 +8,7 @@
   <link rel="stylesheet" href="/assets/css/styles.css" />
 
   <style>
-    /* Forfaits: table image (responsive, readable) */
-    .forfaits-table-wrap{
-      margin-top: 10px;
-    }
-    .forfaits-table-img{
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 14px;
-      border: 1px solid rgba(0,0,0,.10);
-      box-shadow: 0 6px 22px rgba(0,0,0,.06);
-    }
-
-    /* 3 images under the table: bigger, not cropped, not framed */
+    /* 3 images under the table: smaller, NOT cropped, NOT framed */
     .forfaits-three-img-grid{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
@@ -30,20 +17,29 @@
     }
     .forfaits-three-img-grid img{
       width:100%;
-      height:260px;           /* bigger than before */
-      object-fit: contain;    /* not cropped */
+      height:240px;         /* bigger than last time (readable) */
+      object-fit:contain;   /* NOT cropped */
       object-position:center;
       display:block;
-      background: transparent; /* not framed */
+      background:transparent; /* NOT framed */
     }
-
     @media (max-width: 900px){
       .forfaits-three-img-grid{
-        grid-template-columns: 1fr;
+        grid-template-columns:1fr;
       }
       .forfaits-three-img-grid img{
-        height: 240px;
+        height:240px;
       }
+    }
+
+    /* Table image: always visible + responsive */
+    .forfaits-table-img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:14px;
+      border:1px solid rgba(0,0,0,.10);
+      box-shadow:0 6px 22px rgba(0,0,0,.06);
     }
   </style>
 </head>
@@ -74,43 +70,36 @@
         <h1 style="text-transform:uppercase; font-weight:900; margin-bottom:8px;">
           Des forfaits bien conçus, selon votre réalité.
         </h1>
-        <!-- Deleted the 2 lines you requested to remove -->
+        <!-- Deleted the 2 lines you asked to remove -->
       </div>
     </section>
 
     <!-- TABLE FIRST (main highlight) -->
     <section class="section">
       <div class="container card">
-        <h2 style="margin-top:0;">Comparatif des forfaits</h2>
+        <h2 style="margin:0 0 10px;">Comparatif des forfaits</h2>
 
-        <!-- TABLE IMAGE (NEW VERSION) -->
-        <div class="forfaits-table-wrap">
-          <picture>
-            <!-- If your table file is a WEBP now -->
-            <source srcset="/assets/images/forfaits-table.webp" type="image/webp">
-            <!-- If your table file is PNG -->
-            <source srcset="/assets/images/forfaits-table.png" type="image/png">
-            <!-- If your table file is JPG -->
-            <img
-              class="forfaits-table-img"
-              src="/assets/images/forfaits-table.jpg"
-              alt="Tableau comparatif des forfaits Axis Conformité & Services"
-              loading="eager"
-            >
-          </picture>
-        </div>
+        <!-- ✅ TABLE IMAGE (exact path, no guessing, no placeholder) -->
+        <img
+          class="forfaits-table-img"
+          src="/assets/images/forfaits-table.jpg"
+          alt="Tableau comparatif des forfaits Axis Conformité & Services"
+          loading="eager"
+        >
 
+        <!-- moved sentence under the table -->
         <p style="margin-top:14px; color:var(--muted); font-style:italic;">
           * Les prix sont sujet à changement sans préavis
         </p>
 
+        <!-- Button under the sentence -->
         <div style="margin-top:12px;">
           <a class="cta" href="/contact/">Abonnez-vous</a>
         </div>
       </div>
     </section>
 
-    <!-- 3 IMAGES BELOW (bigger, not cropped, not framed) -->
+    <!-- 3 IMAGES BELOW (smaller, not cropped, not framed) -->
     <section class="section">
       <div class="container">
         <div class="forfaits-three-img-grid">
@@ -130,6 +119,7 @@
           Nous pouvons ajouter des services complémentaires à votre forfait, selon votre réalité.
         </p>
 
+        <!-- Removed the price sentence from here (already moved above) -->
         <div style="margin-top:12px; display:flex; gap:12px; flex-wrap:wrap;">
           <a class="cta" href="/services-plus/">Découvrir nos services PLUS</a>
         </div>
