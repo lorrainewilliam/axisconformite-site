@@ -2,14 +2,19 @@
 <html lang="fr">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7YPEQ6KCWV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YPEQ6KCWV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
 
-  gtag('config', 'G-7YPEQ6KCWV');
-</script>
+    // Explicit consent (required for GA4 to store data)
+    gtag('consent', 'default', {
+      analytics_storage: 'granted'
+    });
+
+    gtag('js', new Date());
+    gtag('config', 'G-7YPEQ6KCWV');
+  </script>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
