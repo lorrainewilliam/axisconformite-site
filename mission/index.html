@@ -6,8 +6,13 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
+    // Explicit consent (required for GA4 to store data)
+    gtag('consent', 'default', {
+      analytics_storage: 'granted'
+    });
+
+    gtag('js', new Date());
     gtag('config', 'G-7YPEQ6KCWV');
   </script>
 
